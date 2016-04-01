@@ -53,6 +53,16 @@ RUN apt-get dist-upgrade -y
 RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
 
+## Install codesniffer
+RUN wget https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
+RUN chmod +x phpcs.phar
+RUN mv phpcs.phar /usr/local/bin/phpcs
+
+## Install mess detector
+RUN wget http://static.phpmd.org/php/latest/phpmd.phar
+RUN chmod +x phpmd.phar
+RUN mv phpmd.phar /usr/local/bin/phpmd
+
 ## Install PHPUnit
 RUN wget https://phar.phpunit.de/phpunit.phar
 RUN chmod +x phpunit.phar
