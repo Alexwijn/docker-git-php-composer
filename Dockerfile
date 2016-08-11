@@ -20,11 +20,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	software-properties-common \
 	python-software-properties \
 	openssh-client \
-    curl \
-    ca-certificates \
-    wget \
-    git \
-	mcrypt
+	curl \
+	ca-certificates \
+	wget \
+	git \
+	mcrypt \
+	libxrender1
 
 ## Add php5.6 repository
 RUN add-apt-repository ppa:ondrej/php5-5.6 -y
@@ -35,16 +36,16 @@ RUN add-apt-repository ppa:git-core/ppa -y
 ## Installs PHP
 RUN apt-get update && apt-get install -y --no-install-recommends \
 	php5-readline \
-    php5-cli \
-    php5-mysql \
-    php5-xcache \
-    php5-json \
-    php5-mcrypt \
-    php5-gd \
-    php5-curl \
-    php5-intl \
-    php5-redis \
-    php5-xdebug
+	php5-cli \
+	php5-mysql \
+	php5-xcache \
+	php5-json \
+	php5-mcrypt \
+	php5-gd \
+	php5-curl \
+	php5-intl \
+	php5-redis \
+	php5-xdebug
 	
 ## Upgrades
 RUN apt-get dist-upgrade -y
