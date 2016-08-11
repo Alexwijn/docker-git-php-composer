@@ -25,7 +25,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	wget \
 	git \
 	mcrypt \
-	libxrender1
+	libxrender1 \
+	libxtst6
 
 ## Add php5.6 repository
 RUN add-apt-repository ppa:ondrej/php5-5.6 -y
