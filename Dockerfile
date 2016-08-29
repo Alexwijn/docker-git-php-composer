@@ -55,6 +55,9 @@ RUN apt-get dist-upgrade -y
 RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
 
+## Install composer plugins
+RUN /usr/local/bin/composer global require "hirak/prestissimo:^0.3"
+
 ## Install codesniffer
 RUN wget https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
 RUN chmod +x phpcs.phar
