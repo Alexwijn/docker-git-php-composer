@@ -36,17 +36,17 @@ RUN add-apt-repository ppa:git-core/ppa -y
 
 ## Installs PHP
 RUN apt-get update && apt-get install -y --no-install-recommends \
-	php5-readline \
-	php5-cli \
-	php5-mysql \
-	php5-xcache \
-	php5-json \
-	php5-mcrypt \
-	php5-gd \
-	php5-curl \
-	php5-intl \
-	php5-redis \
-	php5-xdebug
+	php5.6-readline \
+	php5.6-cli \
+	php5.6-mysql \
+	php5.6-xcache \
+	php5.6-json \
+	php5.6-mcrypt \
+	php5.6-gd \
+	php5.6-curl \
+	php5.6-intl \
+	php5.6-redis \
+	php5.6-xdebug
 	
 ## Upgrades
 RUN apt-get dist-upgrade -y
