@@ -72,3 +72,8 @@ RUN mv phpmd.phar /usr/local/bin/phpmd
 RUN wget https://phar.phpunit.de/phpunit.phar
 RUN chmod +x phpunit.phar
 RUN mv phpunit.phar /usr/local/bin/phpunit
+
+## Install Git Subsplit
+RUN wget https://raw.githubusercontent.com/dflydev/git-subsplit/master/git-subsplit.sh
+RUN chmod +x git-subsplit.sh
+RUN mv git-subsplit.sh "$(git --exec-path)"/git-subsplit
