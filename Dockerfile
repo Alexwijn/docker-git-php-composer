@@ -43,6 +43,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	php5.6-json \
 	php5.6-mcrypt \
 	php5.6-dom \
+	php5.6-mbstring \
 	php5.6-gd \
 	php5.6-curl \
 	php5.6-intl \
