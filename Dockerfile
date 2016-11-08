@@ -4,7 +4,7 @@
 #############################################################################
 
 ## Set the base image to Ubuntu
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 
 ## File Author / Maintainer
 MAINTAINER Alex Wijnholds <info@asclub.eu>
@@ -42,6 +42,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	php5.6-xcache \
 	php5.6-json \
 	php5.6-mcrypt \
+	php5.6-dom \
 	php5.6-gd \
 	php5.6-curl \
 	php5.6-intl \
