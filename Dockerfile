@@ -29,7 +29,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	libxtst6
 
 ## Add php5.6 repository
-RUN add-apt-repository ppa:ondrej/php5-5.6 -y
+RUN add-apt-repository ppa:ondrej/php -y
 
 ## Add git core repository
 RUN add-apt-repository ppa:git-core/ppa -y
