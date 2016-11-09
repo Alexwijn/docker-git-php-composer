@@ -46,6 +46,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	php5.6-mbstring \
 	php5.6-zip \
 	php5.6-gd \
+	php5.6-bz2 \
 	php5.6-curl \
 	php5.6-intl \
 	php5.6-redis \
