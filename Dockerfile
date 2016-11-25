@@ -55,8 +55,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 ## Upgrades
 RUN apt-get dist-upgrade -y
 
-# Disable XDebug by default
-RUN phpdismod xdebug
+# Disable XDebug on the CLI
+RUN phpdismod -s cli xdebug
 
 ## Install composer
 RUN curl -sS https://getcomposer.org/installer | php
