@@ -28,7 +28,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	libxrender1 \
 	libxtst6
 
-## Add php5.6 repository
+## Add php 7.1 repository
 RUN add-apt-repository ppa:ondrej/php -y
 
 ## Add git core repository
@@ -36,21 +36,21 @@ RUN add-apt-repository ppa:git-core/ppa -y
 
 ## Installs PHP
 RUN apt-get update && apt-get install -y --no-install-recommends \
-	php5.6-readline \
-	php5.6-cli \
-	php5.6-mysql \
-	php5.6-xcache \
-	php5.6-json \
-	php5.6-mcrypt \
-	php5.6-dom \
-	php5.6-mbstring \
-	php5.6-zip \
-	php5.6-gd \
-	php5.6-bz2 \
-	php5.6-curl \
-	php5.6-intl \
-	php5.6-redis \
-	php5.6-xdebug
+	php7.1-readline \
+	php7.1-cli \
+	php7.1-mysql \
+	php7.1-xcache \
+	php7.1-json \
+	php7.1-mcrypt \
+	php7.1-dom \
+	php7.1-mbstring \
+	php7.1-zip \
+	php7.1-gd \
+	php7.1-bz2 \
+	php7.1-curl \
+	php7.1-intl \
+	php7.1-redis \
+	php7.1-xdebug
 	
 ## Upgrades
 RUN apt-get dist-upgrade -y
