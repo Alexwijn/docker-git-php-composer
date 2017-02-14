@@ -75,7 +75,7 @@ RUN chmod +x phpmd.phar
 RUN mv phpmd.phar /usr/local/bin/phpmd
 
 ## Install PHPUnit
-RUN wget https://phar.phpunit.de/phpunit.phar
+RUN wget https://phar.phpunit.de/phpunit-5.7.phar
 RUN chmod +x phpunit.phar
 RUN mv phpunit.phar /usr/local/bin/phpunit
 
