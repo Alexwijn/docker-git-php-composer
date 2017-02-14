@@ -39,7 +39,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	php7.1-readline \
 	php7.1-cli \
 	php7.1-mysql \
-	php7.1-xcache \
 	php7.1-json \
 	php7.1-mcrypt \
 	php7.1-dom \
