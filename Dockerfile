@@ -76,7 +76,7 @@ RUN mv phpmd.phar /usr/local/bin/phpmd
 
 ## Install PHPUnit
 RUN wget https://phar.phpunit.de/phpunit-5.7.phar
-RUN chmod +x phpunit.phar
+RUN chmod +x phpunit-5.7.phar
 RUN mv phpunit-5.7.phar /usr/local/bin/phpunit
 
 ## Install Git Subsplit
