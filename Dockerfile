@@ -45,6 +45,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	php7.1-mbstring \
 	php7.1-zip \
 	php7.1-gd \
+	php7.1-bcmath \
 	php7.1-bz2 \
 	php7.1-curl \
 	php7.1-intl \
