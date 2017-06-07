@@ -9,6 +9,10 @@ FROM ubuntu:16.04
 ## File Author / Maintainer
 MAINTAINER Alex Wijnholds <info@asclub.eu>
 
+# Set the locale
+RUN apt-get clean && apt-get update
+RUN apt-get install locales
+
 ## Update locales
 RUN locale-gen en_US.UTF-8  
 ENV LANG en_US.UTF-8  
@@ -16,7 +20,7 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8 
 
 ## Install basic things
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get install -y --no-install-recommends \
 	software-properties-common \
 	python-software-properties \
 	openssh-client \
