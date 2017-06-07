@@ -52,6 +52,19 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	php7.1-redis \
 	php7.1-xdebug
 	
+## Laravel Dusk support (Chrome)
+RUN apt-get -y install libxpm4 libxrender1 libgtk2.0-0 libnss3 libgconf-2-4
+RUN apt-get -y install chromium-browser
+
+## XVFB for headless applications
+RUN apt-get -y install xvfb gtk2-engines-pixbuf
+
+## Fonts for the browser
+RUN apt-get -y install xfonts-cyrillic xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable
+
+## Support for screenshot capturing
+RUN apt-get -y install imagemagick x11-apps
+	
 ## Upgrades
 RUN apt-get dist-upgrade -y
 
