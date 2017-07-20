@@ -57,7 +57,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	php7.1-xdebug
 	
 ## Add SSL support
-RUN apt-get -y install libssl-dev=1.0.2g-1ubuntu4 openssl=1.0.2g-1ubuntu4
+RUN apt-get -y install libssl-dev=1.0.2g-1ubuntu4.8 openssl=1.0.2g-1ubuntu4.8
 	
 ## Laravel Dusk support (Chrome)
 RUN apt-get -y install libxpm4 libxrender1 libgtk2.0-0 libnss3 libgconf-2-4
