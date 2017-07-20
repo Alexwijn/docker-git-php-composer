@@ -55,9 +55,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	php7.1-intl \
 	php7.1-redis \
 	php7.1-xdebug
-	
-## Add SSL support
-RUN apt-get -y install libssl-dev=1.0.2g-1ubuntu4.8 openssl=1.0.2g-1ubuntu4.8
+
 	
 ## Laravel Dusk support (Chrome)
 RUN apt-get -y install libxpm4 libxrender1 libgtk2.0-0 libnss3 libgconf-2-4
@@ -74,6 +72,9 @@ RUN apt-get -y install imagemagick x11-apps
 	
 ## Upgrades
 RUN apt-get dist-upgrade -y
+
+## Add SSL support
+RUN apt-get -y install libssl-dev=1.0.2g-1ubuntu4.8 openssl=1.0.2g-1ubuntu4.8 --force-downgrade
 
 # Disable XDebug on the CLI
 RUN phpdismod -s cli xdebug
