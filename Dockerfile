@@ -75,7 +75,7 @@ RUN apt-get -y install imagemagick x11-apps
 RUN apt-get dist-upgrade -y
 
 ## Add SSL support
-RUN apt-get -y install libssl-dev=1.0.2g-1ubuntu4.8 openssl=1.0.2g-1ubuntu4.8 --allow-downgrades
+RUN apt-get -y install libssl-dev openssl
 
 # Disable XDebug on the CLI
 RUN phpdismod -s cli xdebug
