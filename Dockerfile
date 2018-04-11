@@ -86,6 +86,7 @@ RUN mv composer.phar /usr/local/bin/composer
 
 ## Install composer plugins
 RUN /usr/local/bin/composer global require "hirak/prestissimo:^0.3"
+RUN /usr/local/bin/composer global require "laravel/envoy:^1.4"
 
 ## Install codesniffer
 RUN wget https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
