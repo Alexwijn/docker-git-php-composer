@@ -84,6 +84,9 @@ RUN phpdismod -s cli xdebug
 RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
 
+## Add composer bin to PATH
+RUN export PATH="$PATH:$HOME/.composer/vendor/bin"
+
 ## Install composer plugins
 RUN /usr/local/bin/composer global require "hirak/prestissimo:^0.3"
 RUN /usr/local/bin/composer global require "laravel/envoy:^1.4"
