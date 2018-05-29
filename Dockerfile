@@ -119,4 +119,4 @@ RUN chmod +x git-subsplit.sh
 RUN mv git-subsplit.sh "$(git --exec-path)"/git-subsplit
 
 ## Install yarn
-RUN apt-get -y install yarn
+RUN curl -o- -L https://yarnpkg.com/install.sh | bash
