@@ -111,3 +111,8 @@ RUN mv phpunit-5.7.phar /usr/local/bin/phpunit
 RUN wget https://raw.githubusercontent.com/dflydev/git-subsplit/master/git-subsplit.sh
 RUN chmod +x git-subsplit.sh
 RUN mv git-subsplit.sh "$(git --exec-path)"/git-subsplit
+
+## Install yarn
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+RUN apt-get update && apt-get install yarn
