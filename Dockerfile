@@ -42,6 +42,10 @@ RUN add-apt-repository ppa:ondrej/php -y
 ## Add git repository
 RUN add-apt-repository ppa:git-core/ppa -y
 
+## Add yarn repository
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+
 ## Installs PHP
 RUN apt-get update && apt-get install -y --no-install-recommends \
 	php7.1-readline \
@@ -81,6 +85,9 @@ RUN apt-get dist-upgrade -y
 ## Add SSL support
 RUN apt-get -y install libssl-dev openssl
 
+## Install yarn
+RUN apt-get -y install yarn
+
 ## Configure tzdata
 RUN ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime
 RUN dpkg-reconfigure --frontend noninteractive tzdata
@@ -118,7 +125,3 @@ RUN mv phpunit-5.7.phar /usr/local/bin/phpunit
 RUN wget https://raw.githubusercontent.com/dflydev/git-subsplit/master/git-subsplit.sh
 RUN chmod +x git-subsplit.sh
 RUN mv git-subsplit.sh "$(git --exec-path)"/git-subsplit
-
-## Install yarn
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
