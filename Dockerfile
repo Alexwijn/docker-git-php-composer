@@ -21,6 +21,7 @@ ENV LC_ALL en_US.UTF-8
 
 ## Install basic things
 RUN apt-get install -y --no-install-recommends \
+	apt-transport-https \
 	software-properties-common \
 	python-software-properties \
 	openssh-client \
