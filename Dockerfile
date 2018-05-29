@@ -24,6 +24,7 @@ ENV LC_ALL en_US.UTF-8
 
 ## Install basic things
 RUN apt-get install -y --no-install-recommends \
+	gpg-agent \
 	apt-transport-https \
 	software-properties-common \
 	openssh-client \
@@ -119,4 +120,5 @@ RUN chmod +x git-subsplit.sh
 RUN mv git-subsplit.sh "$(git --exec-path)"/git-subsplit
 
 ## Install yarn
-RUN curl -o- -L https://yarnpkg.com/install.sh | bash
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
