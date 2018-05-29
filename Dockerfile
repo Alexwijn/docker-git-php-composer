@@ -81,8 +81,8 @@ RUN apt-get dist-upgrade -y
 RUN apt-get -y install libssl-dev openssl
 
 ## Configure tzdata
-ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime
-dpkg-reconfigure --frontend noninteractive tzdata
+RUN ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime
+RUN dpkg-reconfigure --frontend noninteractive tzdata
 
 # Disable XDebug on the CLI
 RUN phpdismod -s cli xdebug
