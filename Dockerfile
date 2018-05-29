@@ -4,7 +4,7 @@
 #############################################################################
 
 ## Set the base image to Ubuntu
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 ## File Author / Maintainer
 MAINTAINER Alex Wijnholds <info@asclub.eu>
@@ -33,10 +33,10 @@ RUN apt-get install -y --no-install-recommends \
 	libxrender1 \
 	libxtst6
 
-## Add php 7.1 repository
+## Add php repository
 RUN add-apt-repository ppa:ondrej/php -y
 
-## Add git core repository
+## Add git repository
 RUN add-apt-repository ppa:git-core/ppa -y
 
 ## Installs PHP
