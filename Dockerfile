@@ -9,6 +9,9 @@ FROM ubuntu:18.04
 ## File Author / Maintainer
 MAINTAINER Alex Wijnholds <info@asclub.eu>
 
+## Tell everyone we are not interactive
+ENV DEBIAN_FRONTEND noninteractive
+
 # Set the locale
 RUN apt-get clean && apt-get update
 RUN apt-get install locales
@@ -57,7 +60,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	php7.1-redis \
 	php7.1-xdebug \
 	php7.1-imap
-
 	
 ## Laravel Dusk support (Chrome)
 RUN apt-get -y install libxpm4 libxrender1 libgtk2.0-0 libnss3 libgconf-2-4
@@ -77,6 +79,10 @@ RUN apt-get dist-upgrade -y
 
 ## Add SSL support
 RUN apt-get -y install libssl-dev openssl
+
+## Configure tzdata
+ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime
+dpkg-reconfigure --frontend noninteractive tzdata
 
 # Disable XDebug on the CLI
 RUN phpdismod -s cli xdebug
