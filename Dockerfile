@@ -89,7 +89,7 @@ RUN apt-get dist-upgrade -y
 RUN apt-get -y install libssl-dev openssl
 
 ## Install yarn
-RUN apt-get -y install yarn
+RUN apt-get -y install npm yarn
 
 ## Configure tzdata
 RUN ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime
