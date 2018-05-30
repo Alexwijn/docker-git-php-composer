@@ -33,6 +33,8 @@ RUN apt-get install -y --no-install-recommends \
 	ca-certificates \
 	wget \
 	git \
+	gcc \
+	make \
 	mcrypt \
 	libxrender1 \
 	libxtst6
