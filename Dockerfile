@@ -103,7 +103,7 @@ RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
 
 ## Add composer bin to PATH
-RUN export PATH="$PATH:$HOME/.composer/vendor/bin"
+ENV PATH "$PATH:$HOME/.composer/vendor/bin"
 
 ## Install composer plugins
 RUN /usr/local/bin/composer global require "hirak/prestissimo:^0.3"
