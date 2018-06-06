@@ -39,6 +39,10 @@ RUN apt-get install -y --no-install-recommends \
 	libxrender1 \
 	libxtst6
 
+## Install libpng12
+RUN wget http://nl.archive.ubuntu.com/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb
+RUN dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb
+
 ## Add php repository
 RUN add-apt-repository ppa:ondrej/php -y
 
