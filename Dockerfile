@@ -109,16 +109,19 @@ RUN mv composer.phar /usr/local/bin/composer
 ## Add composer bin to PATH
 ENV PATH "$PATH:$HOME/.composer/vendor/bin"
 
-## Install composer packages
-RUN /usr/local/bin/composer global require "hirak/prestissimo"
-RUN /usr/local/bin/composer global require "laravel/envoy"
+## Install composer plugins
+RUN /usr/local/bin/composer global require "hirak/prestissimo:^0.3"
+RUN /usr/local/bin/composer global require "laravel/envoy:^1.4"
 
-RUN /usr/local/bin/composer global require "squizlabs/php_codesniffer"
-RUN /usr/local/bin/composer global require "phpmd/phpmd"
+## Install codesniffer
+RUN wget https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
+RUN chmod +x phpcs.phar
+RUN mv phpcs.phar /usr/local/bin/phpcs
 
-## Install security packages
-RUN /usr/local/bin/composer global require pheromone/phpcs-security-audit
-RUN sh $HOME/.composer/vendor/pheromone/phpcs-security-audit/symlink.sh
+## Install mess detector
+RUN wget http://static.phpmd.org/php/latest/phpmd.phar
+RUN chmod +x phpmd.phar
+RUN mv phpmd.phar /usr/local/bin/phpmd
 
 ## Install PHPUnit
 RUN wget https://phar.phpunit.de/phpunit-5.7.phar
