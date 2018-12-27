@@ -59,7 +59,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	php7.2-mysql \
 	php7.2-sqlite3 \
 	php7.2-json \
-	php7.2-mcrypt \
 	php7.2-dom \
 	php7.2-mbstring \
 	php7.2-zip \
