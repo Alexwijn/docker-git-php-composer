@@ -4,7 +4,7 @@
 #############################################################################
 
 ## Set the base image to Ubuntu
-FROM ubuntu:18.04
+FROM ubuntu:18.10
 
 ## File Author / Maintainer
 MAINTAINER Alex Wijnholds <info@asclub.eu>
@@ -55,23 +55,23 @@ RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources
 
 ## Installs PHP
 RUN apt-get update && apt-get install -y --no-install-recommends \
-	php7.1-readline \
-	php7.1-cli \
-	php7.1-mysql \
-	php7.1-sqlite3 \
-	php7.1-json \
-	php7.1-mcrypt \
-	php7.1-dom \
-	php7.1-mbstring \
-	php7.1-zip \
-	php7.1-gd \
-	php7.1-bcmath \
-	php7.1-bz2 \
-	php7.1-curl \
-	php7.1-intl \
-	php7.1-redis \
-	php7.1-xdebug \
-	php7.1-imap
+	php7.2-readline \
+	php7.2-cli \
+	php7.2-mysql \
+	php7.2-sqlite3 \
+	php7.2-json \
+	php7.2-mcrypt \
+	php7.2-dom \
+	php7.2-mbstring \
+	php7.2-zip \
+	php7.2-gd \
+	php7.2-bcmath \
+	php7.2-bz2 \
+	php7.2-curl \
+	php7.2-intl \
+	php7.2-redis \
+	php7.2-xdebug \
+	php7.2-imap
 	
 ## Laravel Dusk support (Chrome)
 RUN apt-get -y install libxpm4 libxrender1 libgtk2.0-0 libnss3 libgconf-2-4
@@ -124,9 +124,9 @@ RUN chmod +x phpmd.phar
 RUN mv phpmd.phar /usr/local/bin/phpmd
 
 ## Install PHPUnit
-RUN wget https://phar.phpunit.de/phpunit-5.7.phar
-RUN chmod +x phpunit-5.7.phar
-RUN mv phpunit-5.7.phar /usr/local/bin/phpunit
+RUN wget https://phar.phpunit.de/phpunit-7.phar
+RUN chmod +x phpunit-7.phar
+RUN mv phpunit-7.phar /usr/local/bin/phpunit
 
 ## Install Git Subsplit
 RUN wget https://raw.githubusercontent.com/dflydev/git-subsplit/master/git-subsplit.sh
