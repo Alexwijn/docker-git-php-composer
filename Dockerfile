@@ -69,6 +69,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	php7.2-intl \
 	php7.2-redis \
 	php7.2-xdebug \
+	php7.2-mailparse \
 	php7.2-imap
 	
 ## Laravel Dusk support (Chrome)
