@@ -35,7 +35,6 @@ RUN apt-get install -y --no-install-recommends \
 	git \
 	gcc \
 	make \
-	mcrypt \
 	libxrender1 \
 	libxtst6
 
