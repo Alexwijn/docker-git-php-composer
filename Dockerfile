@@ -35,6 +35,7 @@ RUN apt-get install -y --no-install-recommends \
 	git \
 	gcc \
 	make \
+	unzip \
 	libxrender1 \
 	libxtst6
 
