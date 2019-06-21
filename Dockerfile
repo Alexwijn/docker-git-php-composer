@@ -129,6 +129,9 @@ RUN wget https://phar.phpunit.de/phpunit-7.phar
 RUN chmod +x phpunit-7.phar
 RUN mv phpunit-7.phar /usr/local/bin/phpunit
 
+## Install Sentry CLI
+RUN curl -sL https://sentry.io/get-cli/ | bash
+
 ## Install Git Subsplit
 RUN wget https://raw.githubusercontent.com/dflydev/git-subsplit/master/git-subsplit.sh
 RUN chmod +x git-subsplit.sh
