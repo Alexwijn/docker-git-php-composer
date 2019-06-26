@@ -134,7 +134,7 @@ RUN mv phpunit-7.phar /usr/local/bin/phpunit
 RUN curl -sL https://sentry.io/get-cli/ | bash
 
 ## Install change log generator
-RUN pip install gitchangelog
+RUN pip install gitchangelog pystache
 
 ## Install Git Subsplit
 RUN wget https://raw.githubusercontent.com/dflydev/git-subsplit/master/git-subsplit.sh
