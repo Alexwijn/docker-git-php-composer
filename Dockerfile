@@ -36,6 +36,7 @@ RUN apt-get install -y --no-install-recommends \
 	gcc \
 	make \
 	unzip \
+	python3.7 \
 	libxrender1 \
 	libxtst6
 
@@ -131,6 +132,9 @@ RUN mv phpunit-7.phar /usr/local/bin/phpunit
 
 ## Install Sentry CLI
 RUN curl -sL https://sentry.io/get-cli/ | bash
+
+## Install change log generator
+RUN pip install gitchangelog
 
 ## Install Git Subsplit
 RUN wget https://raw.githubusercontent.com/dflydev/git-subsplit/master/git-subsplit.sh
