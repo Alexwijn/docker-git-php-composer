@@ -36,7 +36,7 @@ RUN apt-get install -y --no-install-recommends \
 	gcc \
 	make \
 	unzip \
-	python3.7 \
+	python3.7-pip \
 	libxrender1 \
 	libxtst6
 
