@@ -37,6 +37,7 @@ RUN apt-get install -y --no-install-recommends \
 	make \
 	unzip \
 	python3 \
+	python3-pip \
 	libxrender1 \
 	libxtst6
 
