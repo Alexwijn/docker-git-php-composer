@@ -124,9 +124,9 @@ RUN chmod +x phpmd.phar
 RUN mv phpmd.phar /usr/local/bin/phpmd
 
 ## Install PHPUnit
-RUN wget https://phar.phpunit.de/phpunit-7.phar
-RUN chmod +x phpunit-7.phar
-RUN mv phpunit-7.phar /usr/local/bin/phpunit
+RUN wget https://github.com/jakzal/phpmd/releases/download/2.6.0-jakzal-3/phpmd.phar
+RUN chmod +x phpunit.phar
+RUN mv phpunit.phar /usr/local/bin/phpunit
 
 ## Install Git Subsplit
 RUN wget https://raw.githubusercontent.com/dflydev/git-subsplit/master/git-subsplit.sh
