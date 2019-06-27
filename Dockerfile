@@ -38,6 +38,7 @@ RUN apt-get install -y --no-install-recommends \
 	unzip \
 	python3 \
 	python3-pip \
+	python3-setuptools \
 	libxrender1 \
 	libxtst6
 
