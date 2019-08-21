@@ -26,6 +26,7 @@ ENV LC_ALL en_US.UTF-8
 RUN apt-get install -y --no-install-recommends \
 	gpg-agent \
 	libpng-dev \
+	apt-utils \
 	apt-transport-https \
 	software-properties-common \
 	openssh-client \
