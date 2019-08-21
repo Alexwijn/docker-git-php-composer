@@ -4,7 +4,7 @@
 #############################################################################
 
 ## Set the base image to Ubuntu
-FROM ubuntu:18.10
+FROM ubuntu:18.04
 
 ## File Author / Maintainer
 MAINTAINER Alex Wijnholds <info@asclub.eu>
