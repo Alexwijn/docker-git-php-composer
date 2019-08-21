@@ -53,6 +53,9 @@ RUN add-apt-repository ppa:ondrej/php -y
 ## Add git repository
 RUN add-apt-repository ppa:git-core/ppa -y
 
+## Add chromium repository
+RUN add-apt-repository ppa:chromium-team/stable -y
+
 ## Add yarn repository
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
