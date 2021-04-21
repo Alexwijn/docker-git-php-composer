@@ -119,7 +119,6 @@ ENV PATH "$PATH:$HOME/.composer/vendor/bin"
 
 ## Install composer plugins
 RUN /usr/local/bin/composer global require "alexwijn/laravel-changelogs:^0.4.1"
-RUN /usr/local/bin/composer global require "hirak/prestissimo:^0.3.9"
 RUN /usr/local/bin/composer global require "laravel/envoy:^1.5.0"
 
 ## Install codesniffer
