@@ -110,7 +110,6 @@ RUN mv composer.phar /usr/local/bin/composer
 ENV PATH "$PATH:$HOME/.composer/vendor/bin"
 
 ## Install composer plugins
-RUN /usr/local/bin/composer global require "hirak/prestissimo:^0.3"
 RUN /usr/local/bin/composer global require "laravel/envoy:^1.4"
 
 ## Install codesniffer
