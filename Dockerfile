@@ -118,7 +118,7 @@ RUN chmod +x phpcs.phar
 RUN mv phpcs.phar /usr/local/bin/phpcs
 
 ## Install mess detector
-RUN wget http://static.phpmd.org/php/latest/phpmd.phar
+RUN wget https://phpmd.org/static/latest/phpmd.phar
 RUN chmod +x phpmd.phar
 RUN mv phpmd.phar /usr/local/bin/phpmd
 
