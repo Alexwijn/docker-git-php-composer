@@ -62,24 +62,24 @@ RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources
 
 ## Installs PHP
 RUN apt-get update && apt-get install -y --no-install-recommends \
-	php7.3-readline \
-	php7.3-cli \
-	php7.3-mysql \
-	php7.3-sqlite3 \
-	php7.3-json \
-	php7.3-dom \
-	php7.3-gmp \
-	php7.3-mbstring \
-	php7.3-zip \
-	php7.3-gd \
-	php7.3-bcmath \
-	php7.3-bz2 \
-	php7.3-curl \
-	php7.3-intl \
-	php7.3-redis \
-	php7.3-xdebug \
-	php7.3-mailparse \
-	php7.3-imap
+	php7.4-readline \
+	php7.4-cli \
+	php7.4-mysql \
+	php7.4-sqlite3 \
+	php7.4-json \
+	php7.4-dom \
+	php7.4-gmp \
+	php7.4-mbstring \
+	php7.4-zip \
+	php7.4-gd \
+	php7.4-bcmath \
+	php7.4-bz2 \
+	php7.4-curl \
+	php7.4-intl \
+	php7.4-redis \
+	php7.4-xdebug \
+	php7.4-mailparse \
+	php7.4-imap
 	
 ## Laravel Dusk support (Chrome)
 RUN apt-get -y install libxpm4 libxrender1 libgtk2.0-0 libnss3 libgconf-2-4
