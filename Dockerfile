@@ -4,7 +4,7 @@
 #############################################################################
 
 ## Set the base image to Ubuntu
-FROM ubuntu:18.04
+FROM ubuntu:22.04
 
 ## File Author / Maintainer
 MAINTAINER Alex Wijnholds <info@asclub.eu>
@@ -62,25 +62,25 @@ RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources
 
 ## Installs PHP
 RUN apt-get update && apt-get install -y --no-install-recommends \
-	php7.4-readline \
-	php7.4-cli \
-	php7.4-mysql \
-	php7.4-sqlite3 \
-	php7.4-json \
-	php7.4-dom \
-	php7.4-gmp \
-	php7.4-mbstring \
-	php7.4-zip \
-	php7.4-gd \
-	php7.4-bcmath \
-	php7.4-bz2 \
-	php7.4-curl \
-	php7.4-intl \
-	php7.4-redis \
-	php7.4-xdebug \
-	php7.4-mailparse \
-	php7.4-imap \
-	php7.4-gnupg
+	php8.1-readline \
+	php8.1-cli \
+	php8.1-mysql \
+	php8.1-sqlite3 \
+	php8.1-json \
+	php8.1-dom \
+	php8.1-gmp \
+	php8.1-mbstring \
+	php8.1-zip \
+	php8.1-gd \
+	php8.1-bcmath \
+	php8.1-bz2 \
+	php8.1-curl \
+	php8.1-intl \
+	php8.1-redis \
+	php8.1-xdebug \
+	php8.1-mailparse \
+	php8.1-imap \
+	php8.1-gnupg
 	
 ## Laravel Dusk support (Chrome)
 RUN apt-get -y install libxpm4 libxrender1 libgtk2.0-0 libnss3 libgconf-2-4
