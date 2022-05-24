@@ -80,6 +80,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	php7.4-xdebug \
 	php7.4-mailparse \
 	php7.4-imap \
+	php7.4-gnupg \
 	php7.4-pear
 	
 ## Laravel Dusk support (Chrome)
