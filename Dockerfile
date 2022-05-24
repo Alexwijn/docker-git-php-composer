@@ -134,8 +134,8 @@ RUN mv phpmd.phar /usr/local/bin/phpmd
 
 ## Install PHPUnit
 RUN wget https://phar.phpunit.de/phpunit-9.phar
-RUN chmod +x phpunit-7.phar
-RUN mv phpunit-7.phar /usr/local/bin/phpunit
+RUN chmod +x phpunit-9.phar
+RUN mv phpunit-9.phar /usr/local/bin/phpunit
 
 ## Install Sentry CLI
 RUN curl -sL https://sentry.io/get-cli/ | bash
