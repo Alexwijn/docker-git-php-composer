@@ -4,7 +4,7 @@
 #############################################################################
 
 ## Set the base image to Ubuntu
-FROM ubuntu:22.04
+FROM ubuntu:20.04
 
 ## File Author / Maintainer
 MAINTAINER Alex Wijnholds <info@asclub.eu>
@@ -42,19 +42,15 @@ RUN apt-get install -y --no-install-recommends \
 	python3-setuptools \
 	libxrender1 \
 	libxtst6
-
-## Install libpng12
-RUN wget http://nl.archive.ubuntu.com/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb
-RUN dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb
+	
+## Add libpng12 repository
+RUN add-apt-repository ppa:linuxuprising/libpng12 -y
 
 ## Add php repository
 RUN add-apt-repository ppa:ondrej/php -y
 
 ## Add git repository
 RUN add-apt-repository ppa:git-core/ppa -y
-
-## Add chromium repository
-RUN add-apt-repository ppa:chromium-team/stable -y
 
 ## Add yarn repository
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
@@ -66,7 +62,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	php8.1-cli \
 	php8.1-mysql \
 	php8.1-sqlite3 \
-	php8.1-json \
 	php8.1-dom \
 	php8.1-gmp \
 	php8.1-mbstring \
@@ -83,7 +78,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	php8.1-gnupg
 	
 ## Laravel Dusk support (Chrome)
-RUN apt-get -y install libxpm4 libxrender1 libgtk2.0-0 libnss3 libgconf-2-4
+RUN apt-get -y install libxpm4 libxrender1 libgtk2.0-0 libnss3 libgconf-2-4 libpng12-0
 RUN apt-get -y install chromium-browser
 
 ## XVFB for headless applications
@@ -119,7 +114,6 @@ RUN mv composer.phar /usr/local/bin/composer
 ENV PATH "$PATH:$HOME/.composer/vendor/bin"
 
 ## Install composer plugins
-RUN /usr/local/bin/composer global require "alexwijn/laravel-changelogs:^0.4.1"
 RUN /usr/local/bin/composer global require "laravel/envoy:^1.5.0"
 
 ## Install codesniffer
